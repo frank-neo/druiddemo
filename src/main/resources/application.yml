@@ -12,8 +12,13 @@ spring:
     url: jdbc:mysql://10.41.0.14:3306/testzabbix?characterEncoding=utf8&useSSL=false
     username: test
     password: 123456
+    driverClassName: com.mysql.jdbc.Driver
     #连接池相关配置
     druid:
+      url: jdbc:mysql://10.41.0.14:3306/testzabbix?characterEncoding=utf8&useSSL=false
+      username: test
+      password: 123456
+      driverClassName: com.mysql.jdbc.Driver
       initialSize: 5
       minIdle: 5
       maxActive: 20
@@ -23,7 +28,7 @@ spring:
       validationQuery: SELECT 1 FROM DUAL
       testWhileIdle: true
       testOnBorrow: false
-      exceptionSorter: true
+      #exceptionSorter: true
       testOnReturn: false
       poolPreparedStatements: true
       filters: stat,wall,log4j

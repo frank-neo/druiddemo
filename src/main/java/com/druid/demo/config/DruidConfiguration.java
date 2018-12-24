@@ -1,4 +1,4 @@
-//package config;
+//package com.druid.demo.config;
 //
 //import com.alibaba.druid.pool.DruidDataSource;
 //import org.springframework.beans.factory.annotation.Value;
@@ -13,6 +13,7 @@
 // */
 //@Configuration
 //public class DruidConfiguration {
+//
 //    @Value("${spring.datasource.druid.url}")
 //    private String dbUrl;
 //    @Value("${spring.datasource.druid.username}")
@@ -52,9 +53,10 @@
 //    @Value("${spring.datasource.druid.useGlobalDataSourceStat}")
 //    private boolean useGlobalDataSourceStat;
 //
-//    @Bean     //声明其为Bean实例
+//
+//    @Bean   //声明其为Bean实例
 //    @Primary  //在同样的DataSource中，首先使用被标注的DataSource
-//    public DruidDataSource dataSource(){
+//    public DruidDataSource datasource(){
 //        DruidDataSource datasource = new DruidDataSource();
 //        datasource.setUrl(this.dbUrl);
 //        datasource.setUsername(username);

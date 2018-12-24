@@ -1,5 +1,6 @@
 package com.druid.demo.controller;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.druid.demo.entry.Test;
 import com.druid.demo.service.SelectService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +14,14 @@ import java.util.List;
 public class MysqlConnController {
 
     @Autowired
+    DruidDataSource druidDataSource;
+
+    @Autowired
     SelectService selectService;
 
     @RequestMapping(value = "/test",method = RequestMethod.GET)
     public String test(){
+        System.out.println("==========================================>"+druidDataSource.getInitialSize());
         return "123123123123";
     }
 
